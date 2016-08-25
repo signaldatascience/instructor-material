@@ -1,6 +1,7 @@
 ---
 title: Review Questions with Solutions
 author: Signal Data Science
+toc: True
 ---
 
 Everything you need to know for entry-level data science job interviews with the following exceptions: algorithms, probability/logic questions, and product/metrics questions.
@@ -10,7 +11,7 @@ Linear regression
 
 * Is linear regression a supervised or unsupervised method?
 
-	* Linear regression is supervised because there is a response variable whose values you want to predict.
+	* Linear regression is a supervised method because there is a response variable which you want to predict.
 
 * What does "least squares" refer to in the phrase "ordinary least squares regression"?
 
@@ -921,6 +922,9 @@ Support vector machines
 * How do we fit a linear SVM if the two classes of data are not linearly separable?
 * What is a support vector?
 * What is a dot product?
+
+	* A dot product is a function of two vectors of equal length. If $x = (x_1, x_2, \ldots, x_n)$ and $y = (y_1, y_2, \ldots, y_n)$, then the dot product between $x$ and $y$ is given by $x \cdot y = x_1 y_2 + x_2 y_2 + \cdots + x_n y_n$. The dot product between two vectors is related to the *angle* between them and therefore can be interpreted as a metric of similarity; dot products show up very often in a variety of different machine learning algorithms.
+
 * What is a kernel function?
 * What is one example of a kernel function?
 
@@ -961,6 +965,9 @@ Natural language processing
 	* The classic example of a naive Bayes classifier is spam filtration. Although the conditional independence assumption of naive Bayes is quite far from the actual state of reality, a naive Bayes classifier nevertheless seems to do fairly well for separating spam emails from real emails.
 
 * What is sentiment analysis?
+
+	* Sentiment analysis refers to the usage of natural language processing
+
 * What is topic modeling?
 * What is the generative model proposed by latent Dirichlet allocation?
 * Given a large dataset of books, how would you organize them into different genres?
@@ -1158,10 +1165,26 @@ Theorems
 --------
 
 * What is the law of large numbers?
+
+	* The law of large numbers says that if you repeatedly sample a random variable, the mean of your samples will converge to the expected value of the random variable as your sample size becomes arbitrarily large.
+
 * What is one example of the real-world significance of the law of large numbers?
+
+	* The profits of casinos are guaranteed via the law of large numbers. Each game which casino-goers can play has positive expected value (for the casino), so even if some people get very lucky and win a lot of money from the casino every now and then, the casino still makes a positive amount of money per player given that sufficiently many players go to the casino and play its games.
+
 * What is one common misconception about the law of large numbers?
+
+	* The "gambler's fallacy" is a common misconception about the law of large numbers. The fallacy refers to the *mistaken* belief that the mean of a *small* number of samples from a random variable must coincide with the expected value of the variable or that a streak of unnaturally high results must be "balanced out" by a streak of unnaturally low results.
+
 * What is the central limit theorem?
+
+	* The central limit theorem says the following: Suppose we have a large number of independent random variables $X_1, X_2, \ldots, X_n$. We can take a sample from each random variable and consider the *mean* of those samples. Suppose that we repeat this process many different times; the central limit theorem says that the generated means will follow a Normal distribution.
+
 * What is one example of the real-world significance of the central limit theorem?
+
+	* The central limit theorem guarantees that the number of heads in $n$ flips of a fair coin follows a normal distribution. To make this clear, we can think of each random variable $X_i$ as denoting the outcome of the $i$th coin flip (in a series of $n$ flips), taking on a value of 1 for heads and 0 for tails. For any given series of $n$ flips, taking the mean of the samples from $X_1, X_2, \ldots, X_n$ gives the proportion of heads in those $n$ flips. The central limit theorem then guarantees that the proportion of heads and therefore the *number* of heads in $n$ flips is Normally distributed.
+
+		Another example is a random walk on a 1-dimensional number line, where we start at 0 and are equally as likely to step in the +1 direction as we are in the -1 direction. Iterating infinitely many times, the probability distribution of our position is guaranteed by the central limit theorem to follow a Normal distribution. Such a process serves as the basis of a variety of naturally-occurring processes, which 
 
 Frequentist inference
 ---------------------
